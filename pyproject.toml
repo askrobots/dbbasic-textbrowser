@@ -42,12 +42,12 @@ dev = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/yourusername/dbbasic-textbrowser"
-"Bug Reports" = "https://github.com/yourusername/dbbasic-textbrowser/issues"
-"Source" = "https://github.com/yourusername/dbbasic-textbrowser"
+Homepage = "https://github.com/askrobots/dbbasic-textbrowser"
+"Bug Reports" = "https://github.com/askrobots/dbbasic-textbrowser/issues"
+"Source" = "https://github.com/askrobots/dbbasic-textbrowser"
 
 [project.scripts]
-dbbasic-textbrowser = "browser:main"
+dbbasic-textbrowser = "browser:cli"
 
 [tool.setuptools]
 py-modules = ["browser"]

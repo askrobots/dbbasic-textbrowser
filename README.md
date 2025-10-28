@@ -1,8 +1,29 @@
 # DBBasic TextBrowser
 
+[![PyPI version](https://badge.fury.io/py/dbbasic-textbrowser.svg)](https://badge.fury.io/py/dbbasic-textbrowser)
+[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Tests](https://img.shields.io/badge/tests-28%20passing-brightgreen)](tests/)
+
 A text-mode web browser with AI assistance, inspired by Lynx. **Now with TextFirst.css** - a 13 KB CSS framework for the text-first web.
 
-**Status:** ✅ Production ready with 28 passing tests, comprehensive documentation, and proper packaging.
+**Status:** ✅ Production ready • 📦 [Available on PyPI](https://pypi.org/project/dbbasic-textbrowser/) • ✅ 28 passing tests
+
+---
+
+## Quick Start
+
+```bash
+# Install
+pip install dbbasic-textbrowser
+
+# Run
+dbbasic-textbrowser
+```
+
+That's it! The browser will launch with a curated homepage. Press `H` for help.
+
+---
 
 ## Unique Features
 
@@ -34,11 +55,33 @@ A text-mode web browser with AI assistance, inspired by Lynx. **Now with TextFir
 
 ## Installation
 
+### From PyPI (Recommended)
+
 ```bash
-pip install -r requirements.txt
+pip install dbbasic-textbrowser
 ```
 
-## Usage
+Then run:
+
+```bash
+dbbasic-textbrowser
+```
+
+### From Source
+
+```bash
+git clone https://github.com/askrobots/dbbasic-textbrowser.git
+cd dbbasic-textbrowser
+pip install -e .
+```
+
+Then run:
+
+```bash
+dbbasic-textbrowser
+```
+
+Or:
 
 ```bash
 python browser.py

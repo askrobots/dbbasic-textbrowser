@@ -20,7 +20,7 @@ setup(
     description="A text-mode web browser with AI assistance",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/yourusername/dbbasic-textbrowser",
+    url="https://github.com/askrobots/dbbasic-textbrowser",
     packages=find_packages(),
     py_modules=["browser"],
     classifiers=[
@@ -48,7 +48,7 @@ setup(
     },
     entry_points={
         "console_scripts": [
-            "dbbasic-textbrowser=browser:main",
+            "dbbasic-textbrowser=browser:cli",
         ],
     },
     include_package_data=True,
@@ -57,7 +57,7 @@ setup(
     },
     keywords="browser text terminal curses ai lynx web accessibility",
     project_urls={
-        "Bug Reports": "https://github.com/yourusername/dbbasic-textbrowser/issues",
-        "Source": "https://github.com/yourusername/dbbasic-textbrowser",
+        "Bug Reports": "https://github.com/askrobots/dbbasic-textbrowser/issues",
+        "Source": "https://github.com/askrobots/dbbasic-textbrowser",
     },
 )

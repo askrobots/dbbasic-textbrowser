@@ -945,5 +945,10 @@ def main(stdscr):
     browser.run()
 
 
-if __name__ == '__main__':
+def cli():
+    """Entry point for console script."""
     curses.wrapper(main)
+
+
+if __name__ == '__main__':
+    cli()
