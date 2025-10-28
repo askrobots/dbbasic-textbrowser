@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Demo - DBBasic TextBrowser</title>
+</head>
+<body>
+    <h1>DBBasic TextBrowser Color Demo</h1>
+    <p>This page demonstrates HTML font colors in a text browser!</p>
+
+    <hr>
+
+    <h2>What You're Seeing</h2>
+    <p>The <font color="red">&lt;font color&gt;</font> tag was part of HTML since 1997, but <font color="blue">text browsers never rendered it</font>. Until now!</p>
+
+    <p><font color="green">DBBasic TextBrowser bridges the gap</font> between <font color="yellow">HTML colors</font> and <font color="cyan">terminal colors</font>, creating what could have been: <font color="magenta">a colorful BBS-style web</font>.</p>
+
+    <hr>
+
+    <h2>Standard HTML Color Names</h2>
+
+    <h3>Basic Colors</h3>
+    <p><font color="red">Red</font> - Errors, warnings, important notices</p>
+    <p><font color="green">Green</font> - Success, confirmation, positive actions</p>
+    <p><font color="blue">Blue</font> - Information, links, neutral content</p>
+    <p><font color="yellow">Yellow</font> - Caution, highlights, attention</p>
+    <p><font color="cyan">Cyan</font> - Secondary information, metadata</p>
+    <p><font color="magenta">Magenta</font> - Special content, emphasis</p>
+    <p><font color="white">White</font> - Default text, primary content</p>
+    <p><font color="black">Black</font> - (May not be visible on dark backgrounds)</p>
+
+    <h3>Extended Colors</h3>
+    <p><font color="orange">Orange</font> - Warnings (maps to yellow/red)</p>
+    <p><font color="purple">Purple</font> - Special content (maps to magenta)</p>
+    <p><font color="pink">Pink</font> - Highlight (maps to magenta)</p>
+    <p><font color="brown">Brown</font> - Neutral (maps to yellow)</p>
+    <p><font color="gray">Gray</font> - Muted content (maps to white/black)</p>
+    <p><font color="grey">Grey</font> - British spelling also works!</p>
+
+    <hr>
+
+    <h2>Practical Examples</h2>
+
+    <h3>System Messages</h3>
+    <p><font color="green">✓ SUCCESS:</font> Your changes have been saved.</p>
+    <p><font color="red">✗ ERROR:</font> Unable to connect to server.</p>
+    <p><font color="yellow">⚠ WARNING:</font> This action cannot be undone.</p>
+    <p><font color="blue">ℹ INFO:</font> You have 3 unread messages.</p>
+
+    <h3>Code Syntax</h3>
+    <p><font color="magenta">function</font> <font color="cyan">calculateTotal</font>() {</p>
+    <p>  <font color="magenta">return</font> <font color="yellow">price</font> * <font color="cyan">quantity</font>;</p>
+    <p>}</p>
+
+    <h3>Status Indicators</h3>
+    <p>Server Status: <font color="green">● ONLINE</font></p>
+    <p>Database Status: <font color="green">● ONLINE</font></p>
+    <p>Cache Status: <font color="yellow">● DEGRADED</font></p>
+    <p>Backup Status: <font color="red">● OFFLINE</font></p>
+
+    <h3>Log Output</h3>
+    <p><font color="cyan">[2025-01-28 14:32:01]</font> <font color="green">INFO</font> Server started on port 8080</p>
+    <p><font color="cyan">[2025-01-28 14:32:15]</font> <font color="blue">DEBUG</font> Processing request from 192.168.1.1</p>
+    <p><font color="cyan">[2025-01-28 14:32:16]</font> <font color="yellow">WARN</font> Slow query detected (2.3s)</p>
+    <p><font color="cyan">[2025-01-28 14:32:20]</font> <font color="red">ERROR</font> Connection timeout</p>
+
+    <h3>File Listings</h3>
+    <p><font color="blue">documents/</font> - Directory</p>
+    <p><font color="green">script.sh*</font> - Executable</p>
+    <p><font color="white">readme.txt</font> - Text file</p>
+    <p><font color="cyan">config.json</font> - Config file</p>
+    <p><font color="red">secret.key</font> - Important file</p>
+
+    <h3>Progress Indicators</h3>
+    <p>Download: <font color="green">████████████████████</font> 100%</p>
+    <p>Upload:   <font color="yellow">███████████░░░░░░░░░</font> 55%</p>
+    <p>Install:  <font color="red">███░░░░░░░░░░░░░░░░░</font> 15%</p>
+
+    <hr>
+
+    <h2>The BBS-Style Web That Could Have Been</h2>
+
+    <p>In the 1980s and 90s, <font color="cyan">BBS systems</font> used <font color="yellow">ANSI color codes</font> to create <font color="green">vibrant, colorful text interfaces</font>.</p>
+
+    <p>In 1997, HTML added the <font color="magenta">&lt;font color&gt;</font> tag.</p>
+
+    <p><font color="red">But text browsers like Lynx never implemented it.</font></p>
+
+    <p><font color="green">Why not?</font> They had all the technology:</p>
+    <ul>
+        <li><font color="cyan">Terminals supported 8-16 colors</font> (ANSI codes)</li>
+        <li><font color="yellow">HTML defined standard color names</font></li>
+        <li><font color="magenta">Browsers could parse the tags</font></li>
+    </ul>
+
+    <p><font color="blue">The result:</font> The text web remained monochrome while BBSes were colorful.</p>
+
+    <p><font color="green">Until now.</font> <font color="yellow">DBBasic TextBrowser</font> brings color to the text web.</p>
+
+    <hr>
+
+    <h2>Technical Details</h2>
+
+    <h3>Color Mapping</h3>
+    <p>Terminal color palette (8 basic + bright variants):</p>
+    <ul>
+        <li><font color="black">0: Black</font></li>
+        <li><font color="red">1: Red</font></li>
+        <li><font color="green">2: Green</font></li>
+        <li><font color="yellow">3: Yellow</font></li>
+        <li><font color="blue">4: Blue</font></li>
+        <li><font color="magenta">5: Magenta</font></li>
+        <li><font color="cyan">6: Cyan</font></li>
+        <li><font color="white">7: White</font></li>
+    </ul>
+
+    <h3>Why This Works</h3>
+    <ul>
+        <li><font color="green">No bandwidth overhead</font> - colors are text attributes</li>
+        <li><font color="cyan">Universal support</font> - works in any terminal</li>
+        <li><font color="yellow">Semantic meaning</font> - colors convey information</li>
+        <li><font color="magenta">Accessibility</font> - color + text = redundant encoding</li>
+        <li><font color="blue">Standards-based</font> - uses HTML 3.2 tags</li>
+    </ul>
+
+    <hr>
+
+    <h2>Rainbow Text Demo</h2>
+    <p>
+        <font color="red">C</font><font color="yellow">o</font><font color="green">l</font><font color="cyan">o</font><font color="blue">r</font><font color="magenta">f</font><font color="red">u</font><font color="yellow">l</font>
+        <font color="green">t</font><font color="cyan">e</font><font color="blue">x</font><font color="magenta">t</font>
+        <font color="red">i</font><font color="yellow">n</font>
+        <font color="green">a</font>
+        <font color="cyan">t</font><font color="blue">e</font><font color="magenta">r</font><font color="red">m</font><font color="yellow">i</font><font color="green">n</font><font color="cyan">a</font><font color="blue">l</font><font color="magenta">!</font>
+    </p>
+
+    <hr>
+
+    <h2>ASCII Art + Color</h2>
+    <pre>
+<font color="yellow">    ___</font>
+<font color="yellow">   /   \</font>
+<font color="yellow">  | O O |</font>  <font color="cyan">DBBasic TextBrowser</font>
+<font color="yellow">   \___/</font>   <font color="green">Bringing color to the text web</font>
+<font color="yellow">    | |</font>
+<font color="yellow">   /   \</font>
+    </pre>
+
+    <hr>
+
+    <h2>Compare With Modern Web</h2>
+
+    <h3>Modern Web (CSS):</h3>
+    <p><code>&lt;span class="text-red-500 font-bold bg-gray-100 px-4 py-2 rounded-lg"&gt;Error&lt;/span&gt;</code></p>
+    <ul>
+        <li>Requires CSS framework (Tailwind)</li>
+        <li>50+ KB CSS file</li>
+        <li>Doesn't work in text browsers</li>
+        <li>Breaks without JavaScript sometimes</li>
+    </ul>
+
+    <h3>DBBasic TextBrowser (HTML font colors):</h3>
+    <p><code>&lt;font color="red"&gt;Error&lt;/font&gt;</code></p>
+    <ul>
+        <li><font color="green">No framework needed</font></li>
+        <li><font color="green">Zero CSS</font></li>
+        <li><font color="green">Works in text browsers</font></li>
+        <li><font color="green">Never breaks</font></li>
+    </ul>
+
+    <hr>
+
+    <h2>Future Possibilities</h2>
+    <p>What if the web had embraced terminal colors?</p>
+    <ul>
+        <li><font color="cyan">SSH web browsing</font> - Full color over slow connections</li>
+        <li><font color="yellow">BBS-style web apps</font> - Text interfaces with color</li>
+        <li><font color="green">Low-bandwidth rich content</font> - No images needed</li>
+        <li><font color="magenta">Terminal-native web</font> - curl + color = rich experience</li>
+        <li><font color="blue">Accessibility first</font> - Screen readers + semantic color</li>
+    </ul>
+
+    <hr>
+
+    <p><em><font color="cyan">Press Ctrl-K to go anywhere</font> | <font color="yellow">Press H for help</font> | <font color="green">Press Q to quit</font></em></p>
+
+    <p><small><font color="magenta">DBBasic TextBrowser</font> - <font color="cyan">The colorful text web that should have existed</font></small></p>
+</body>
+</html>

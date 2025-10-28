@@ -1,0 +1,753 @@
+/**
+ * TextFirst.css - A Semantic CSS Framework
+ *
+ * Philosophy: Enhance semantic HTML instead of replacing it.
+ * Works in text browsers AND graphical browsers.
+ * Against the Tri-Hard Pattern.
+ *
+ * Version: 0.1.0
+ * License: MIT
+ * Date: 2025-01-28
+ */
+
+/* ============================================
+   BASE STYLES
+   ============================================ */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+               'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.6;
+  color: #1f2937;
+  max-width: 80ch;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  background-color: #ffffff;
+}
+
+/* ============================================
+   TYPOGRAPHY
+   ============================================ */
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.2;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+h1 { font-size: 2.5rem; color: #111827; }
+h2 { font-size: 2rem; color: #1f2937; border-bottom: 2px solid #e5e7eb; padding-bottom: 0.5rem; }
+h3 { font-size: 1.5rem; color: #374151; }
+h4 { font-size: 1.25rem; color: #4b5563; }
+h5 { font-size: 1.125rem; color: #6b7280; }
+h6 { font-size: 1rem; color: #6b7280; }
+
+p {
+  margin: 1rem 0;
+}
+
+hr {
+  border: none;
+  border-top: 2px solid #e5e7eb;
+  margin: 2rem 0;
+}
+
+/* ============================================
+   ENHANCE OLD SEMANTIC TAGS
+   ============================================ */
+
+/* Font colors - enhance <font color> tag */
+font[color="red"] {
+  color: #dc2626;
+  background-color: #fef2f2;
+  padding: 0.125rem 0.375rem;
+  border-radius: 0.25rem;
+  font-weight: 500;
+}
+
+font[color="green"] {
+  color: #16a34a;
+  background-color: #f0fdf4;
+  padding: 0.125rem 0.375rem;
+  border-radius: 0.25rem;
+  font-weight: 500;
+}
+
+font[color="yellow"] {
+  color: #ca8a04;
+  background-color: #fefce8;
+  padding: 0.125rem 0.375rem;
+  border-radius: 0.25rem;
+  font-weight: 500;
+}
+
+font[color="blue"] {
+  color: #2563eb;
+  background-color: #eff6ff;
+  padding: 0.125rem 0.375rem;
+  border-radius: 0.25rem;
+  font-weight: 500;
+}
+
+font[color="cyan"] {
+  color: #0891b2;
+  background-color: #ecfeff;
+  padding: 0.125rem 0.375rem;
+  border-radius: 0.25rem;
+  font-weight: 500;
+}
+
+font[color="magenta"] {
+  color: #c026d3;
+  background-color: #fdf4ff;
+  padding: 0.125rem 0.375rem;
+  border-radius: 0.25rem;
+  font-weight: 500;
+}
+
+font[color="white"] {
+  color: #f9fafb;
+  background-color: #111827;
+  padding: 0.125rem 0.375rem;
+  border-radius: 0.25rem;
+}
+
+/* Center tag - works in text, enhanced in graphical */
+center {
+  text-align: center;
+  display: block;
+  margin: 1rem 0;
+}
+
+/* Menu tag - numbered lists */
+menu {
+  list-style: none;
+  padding: 0;
+  counter-reset: menu-counter;
+  margin: 1rem 0;
+}
+
+menu li {
+  counter-increment: menu-counter;
+  padding: 0.75rem 1rem;
+  margin: 0.5rem 0;
+  border-left: 4px solid #3b82f6;
+  background-color: #f9fafb;
+  border-radius: 0 0.375rem 0.375rem 0;
+  transition: all 0.2s;
+}
+
+menu li:hover {
+  background-color: #eff6ff;
+  border-left-width: 6px;
+}
+
+menu li::before {
+  content: "[" counter(menu-counter) "] ";
+  font-weight: bold;
+  color: #3b82f6;
+  margin-right: 0.75rem;
+  font-family: 'Courier New', monospace;
+}
+
+menu li a {
+  text-decoration: none;
+  color: #1f2937;
+  font-weight: 500;
+}
+
+menu li a:hover {
+  color: #3b82f6;
+}
+
+/* Blockquote - add visual bar */
+blockquote {
+  border-left: 4px solid #3b82f6;
+  padding-left: 1.5rem;
+  margin: 1.5rem 0;
+  color: #4b5563;
+  font-style: italic;
+  background-color: #f9fafb;
+  padding: 1rem 1.5rem;
+  border-radius: 0 0.5rem 0.5rem 0;
+}
+
+blockquote footer {
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  color: #6b7280;
+  font-style: normal;
+}
+
+/* ============================================
+   CODE AND PRE
+   ============================================ */
+
+code {
+  background-color: #f3f4f6;
+  padding: 0.125rem 0.375rem;
+  border-radius: 0.25rem;
+  font-family: 'Monaco', 'Courier New', monospace;
+  font-size: 0.875em;
+  color: #dc2626;
+}
+
+pre {
+  background-color: #1f2937;
+  color: #f9fafb;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+  margin: 1.5rem 0;
+  border: 2px solid #374151;
+}
+
+pre code {
+  background: none;
+  color: inherit;
+  padding: 0;
+  font-size: 0.875rem;
+  line-height: 1.7;
+}
+
+kbd {
+  background-color: #1f2937;
+  color: #f9fafb;
+  padding: 0.125rem 0.5rem;
+  border-radius: 0.25rem;
+  font-family: 'Monaco', 'Courier New', monospace;
+  font-size: 0.875em;
+  border: 1px solid #374151;
+  box-shadow: 0 2px 0 #374151;
+}
+
+samp {
+  background-color: #f3f4f6;
+  padding: 0.5rem 1rem;
+  display: block;
+  margin: 1rem 0;
+  border-left: 3px solid #6b7280;
+  font-family: 'Monaco', 'Courier New', monospace;
+  font-size: 0.875rem;
+}
+
+/* ============================================
+   DETAILS AND SUMMARY
+   ============================================ */
+
+details {
+  border: 2px solid #e5e7eb;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin: 1rem 0;
+  background-color: #f9fafb;
+}
+
+details[open] {
+  background-color: #ffffff;
+  border-color: #3b82f6;
+}
+
+summary {
+  cursor: pointer;
+  font-weight: 600;
+  user-select: none;
+  list-style: none;
+  padding: 0.5rem;
+  margin: -0.5rem;
+  border-radius: 0.375rem;
+  transition: background-color 0.2s;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+summary::before {
+  content: "[+] ";
+  color: #3b82f6;
+  font-weight: bold;
+  margin-right: 0.5rem;
+  font-family: 'Courier New', monospace;
+}
+
+details[open] summary::before {
+  content: "[-] ";
+  color: #16a34a;
+}
+
+summary:hover {
+  background-color: #eff6ff;
+}
+
+details[open] summary {
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+/* ============================================
+   HTML5 SEMANTIC TAGS
+   ============================================ */
+
+article {
+  max-width: 75ch;
+  margin: 2rem auto;
+}
+
+article header {
+  border-bottom: 3px solid #3b82f6;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+}
+
+article header h1 {
+  margin-top: 0;
+}
+
+article footer {
+  border-top: 2px solid #e5e7eb;
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  color: #6b7280;
+  font-size: 0.875rem;
+}
+
+aside {
+  background-color: #fefce8;
+  border-left: 4px solid #eab308;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  border-radius: 0 0.5rem 0.5rem 0;
+}
+
+aside h1, aside h2, aside h3 {
+  margin-top: 0;
+}
+
+section {
+  margin: 3rem 0;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 1.5rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #3b82f6;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+nav ul li a:hover {
+  color: #1e40af;
+  text-decoration: underline;
+}
+
+/* ============================================
+   NEW SEMANTIC TAGS (custom elements)
+   ============================================ */
+
+/* <color name="error|success|warning|info|muted|highlight"> */
+color {
+  padding: 0.125rem 0.375rem;
+  border-radius: 0.25rem;
+  font-weight: 500;
+}
+
+color[name="error"] {
+  color: #dc2626;
+  background-color: #fef2f2;
+}
+
+color[name="success"] {
+  color: #16a34a;
+  background-color: #f0fdf4;
+}
+
+color[name="warning"] {
+  color: #ca8a04;
+  background-color: #fefce8;
+}
+
+color[name="info"] {
+  color: #2563eb;
+  background-color: #eff6ff;
+}
+
+color[name="muted"] {
+  color: #6b7280;
+  background-color: transparent;
+  padding: 0;
+}
+
+color[name="highlight"] {
+  background-color: #fef08a;
+  color: #854d0e;
+  font-weight: 600;
+}
+
+/* <box style="single|double|rounded|bold"> */
+box {
+  display: block;
+  border: 2px solid #3b82f6;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  border-radius: 0.5rem;
+  background-color: #ffffff;
+}
+
+box[style="double"] {
+  border-width: 4px;
+  border-color: #1e40af;
+}
+
+box[style="rounded"] {
+  border-radius: 1rem;
+}
+
+box[style="bold"] {
+  border-width: 3px;
+  border-color: #1e40af;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+box h1, box h2, box h3, box h4, box h5, box h6 {
+  margin-top: 0;
+}
+
+/* <banner type="info|warning|error|success"> */
+banner {
+  display: block;
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+  border-radius: 0.5rem;
+  border: 2px solid;
+  font-weight: 500;
+}
+
+banner[type="info"] {
+  background-color: #eff6ff;
+  border-color: #3b82f6;
+  color: #1e40af;
+}
+
+banner[type="warning"] {
+  background-color: #fefce8;
+  border-color: #eab308;
+  color: #854d0e;
+}
+
+banner[type="error"] {
+  background-color: #fef2f2;
+  border-color: #ef4444;
+  color: #991b1b;
+}
+
+banner[type="success"] {
+  background-color: #f0fdf4;
+  border-color: #16a34a;
+  color: #166534;
+}
+
+banner::before {
+  font-weight: bold;
+  margin-right: 0.75rem;
+  font-size: 1.25em;
+}
+
+banner[type="info"]::before {
+  content: "ℹ️";
+}
+
+banner[type="warning"]::before {
+  content: "⚠️";
+}
+
+banner[type="error"]::before {
+  content: "❌";
+}
+
+banner[type="success"]::before {
+  content: "✅";
+}
+
+/* <status value="online|offline|degraded|unknown"> */
+status {
+  font-weight: 500;
+}
+
+status::before {
+  content: "● ";
+  font-size: 1.2em;
+  margin-right: 0.5rem;
+}
+
+status[value="online"] {
+  color: #16a34a;
+}
+
+status[value="online"]::before {
+  color: #16a34a;
+}
+
+status[value="offline"] {
+  color: #dc2626;
+}
+
+status[value="offline"]::before {
+  color: #dc2626;
+}
+
+status[value="degraded"] {
+  color: #eab308;
+}
+
+status[value="degraded"]::before {
+  color: #eab308;
+}
+
+status[value="unknown"] {
+  color: #9ca3af;
+}
+
+status[value="unknown"]::before {
+  color: #9ca3af;
+}
+
+/* ============================================
+   TABLES
+   ============================================ */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+}
+
+th, td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+th {
+  background-color: #f9fafb;
+  font-weight: 600;
+  border-bottom: 2px solid #d1d5db;
+  color: #374151;
+}
+
+tr:hover {
+  background-color: #f9fafb;
+}
+
+table[simple] {
+  border: 2px solid #d1d5db;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+table[simple] th {
+  background-color: #e5e7eb;
+  border-bottom: 3px solid #d1d5db;
+}
+
+/* ============================================
+   FORMS
+   ============================================ */
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #374151;
+}
+
+input, textarea, select {
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 0.625rem 0.875rem;
+  border: 2px solid #d1d5db;
+  border-radius: 0.375rem;
+  width: 100%;
+  max-width: 30rem;
+  transition: all 0.2s;
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+input[type="checkbox"], input[type="radio"] {
+  width: auto;
+  margin-right: 0.5rem;
+}
+
+button, input[type="submit"], input[type="button"] {
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  padding: 0.625rem 1.25rem;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  font-weight: 600;
+  width: auto;
+  transition: background-color 0.2s;
+  font-size: 1rem;
+}
+
+button:hover, input[type="submit"]:hover, input[type="button"]:hover {
+  background-color: #2563eb;
+}
+
+button:active, input[type="submit"]:active, input[type="button"]:active {
+  background-color: #1e40af;
+}
+
+fieldset {
+  border: 2px solid #e5e7eb;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  margin: 1rem 0;
+}
+
+legend {
+  font-weight: 600;
+  padding: 0 0.5rem;
+  color: #374151;
+}
+
+/* ============================================
+   LISTS
+   ============================================ */
+
+ul, ol {
+  margin: 1rem 0;
+  padding-left: 2rem;
+}
+
+li {
+  margin: 0.5rem 0;
+}
+
+dl {
+  margin: 1rem 0;
+}
+
+dt {
+  font-weight: 600;
+  color: #374151;
+  margin-top: 1rem;
+}
+
+dd {
+  margin-left: 2rem;
+  margin-top: 0.5rem;
+  color: #4b5563;
+}
+
+/* ============================================
+   LINKS
+   ============================================ */
+
+a {
+  color: #3b82f6;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: #1e40af;
+}
+
+a:visited {
+  color: #7c3aed;
+}
+
+/* ============================================
+   UTILITIES (minimal, semantic only)
+   ============================================ */
+
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+.text-left { text-align: left; }
+
+.mb-0 { margin-bottom: 0; }
+.mb-1 { margin-bottom: 0.5rem; }
+.mb-2 { margin-bottom: 1rem; }
+.mb-4 { margin-bottom: 2rem; }
+
+.mt-0 { margin-top: 0; }
+.mt-1 { margin-top: 0.5rem; }
+.mt-2 { margin-top: 1rem; }
+.mt-4 { margin-top: 2rem; }
+
+.hidden { display: none; }
+.block { display: block; }
+.inline { display: inline; }
+.inline-block { display: inline-block; }
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (max-width: 768px) {
+  body {
+    padding: 1rem;
+  }
+
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.75rem; }
+  h3 { font-size: 1.5rem; }
+
+  menu li {
+    padding: 0.5rem 0.75rem;
+  }
+
+  table {
+    font-size: 0.875rem;
+  }
+
+  th, td {
+    padding: 0.5rem;
+  }
+}
+
+/* ============================================
+   PRINT STYLES
+   ============================================ */
+
+@media print {
+  body {
+    max-width: 100%;
+    font-size: 12pt;
+  }
+
+  a {
+    color: #000;
+    text-decoration: underline;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.875em;
+  }
+
+  banner, box, details, blockquote {
+    page-break-inside: avoid;
+  }
+}

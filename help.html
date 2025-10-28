@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DBBasic TextBrowser Help</title>
+</head>
+<body>
+    <h1>DBBasic TextBrowser Help</h1>
+    <p>A text-mode web browser with AI assistance</p>
+
+    <hr>
+
+    <h2>🎯 Quick Start</h2>
+    <ul>
+        <li>Press <strong>Ctrl-K</strong> to enter a URL or AI command</li>
+        <li>Press <strong>0-9</strong> to follow numbered links instantly</li>
+        <li>Press <strong>F</strong> to fill out forms (like search boxes)</li>
+        <li>Press <strong>H</strong> to see this help page</li>
+        <li>Press <strong>Q</strong> to quit</li>
+    </ul>
+
+    <hr>
+
+    <h2>⌨️ Keyboard Controls</h2>
+
+    <h3>Navigation</h3>
+    <ul>
+        <li><strong>Ctrl-K</strong> - Open address/AI command box</li>
+        <li><strong>↑ ↓</strong> - Scroll up/down one line</li>
+        <li><strong>Page Up/Down</strong> - Scroll one page</li>
+        <li><strong>Home</strong> - Jump to top of page</li>
+        <li><strong>End</strong> - Jump to bottom of page</li>
+    </ul>
+
+    <h3>Links</h3>
+    <ul>
+        <li><strong>0-9</strong> - Follow links 0 through 9 instantly</li>
+        <li><strong>G</strong> - Go to link by number (for links 10+)</li>
+        <li>Links appear inline as <strong>[0]</strong>, <strong>[1]</strong>, etc.</li>
+    </ul>
+
+    <h3>Forms</h3>
+    <ul>
+        <li><strong>F</strong> - Fill out form on current page</li>
+        <li>Interactive field-by-field input</li>
+        <li>Automatically submits when done</li>
+    </ul>
+
+    <h3>Other</h3>
+    <ul>
+        <li><strong>H</strong> - Show this help page</li>
+        <li><strong>Q</strong> - Quit browser</li>
+    </ul>
+
+    <hr>
+
+    <h2>🤖 AI Features</h2>
+
+    <h3>AI Status</h3>
+    <p>AI features require an OpenAI API key. Set it with:</p>
+    <pre>export OPENAI_API_KEY=your-key-here</pre>
+
+    <h3>Using AI Commands</h3>
+    <p>Press <strong>Ctrl-K</strong> and type natural language commands:</p>
+
+    <h4>Content Analysis</h4>
+    <ul>
+        <li><strong>summarize this page</strong> - Get a concise summary</li>
+        <li><strong>what are the main points?</strong> - Extract key information</li>
+        <li><strong>explain this like I'm 5</strong> - Simplify complex content</li>
+        <li><strong>what is this article about?</strong> - General comprehension</li>
+    </ul>
+
+    <h4>Information Extraction</h4>
+    <ul>
+        <li><strong>find pricing information</strong> - Extract specific data</li>
+        <li><strong>what does this say about [topic]?</strong> - Targeted questions</li>
+        <li><strong>list all the key dates mentioned</strong> - Extract structured info</li>
+    </ul>
+
+    <h4>Translation</h4>
+    <ul>
+        <li><strong>translate to Spanish</strong> - Translate content</li>
+        <li><strong>translate to [language]</strong> - Any language</li>
+    </ul>
+
+    <h4>Navigation (AI Function Calling)</h4>
+    <ul>
+        <li><strong>go to wikipedia for [topic]</strong> - AI navigates for you</li>
+        <li><strong>find the homepage for [company]</strong> - AI searches and navigates</li>
+        <li><strong>search for [query]</strong> - AI can search and navigate</li>
+    </ul>
+
+    <h3>How AI Detection Works</h3>
+    <p>When you press Ctrl-K, the browser detects:</p>
+    <ul>
+        <li><strong>URL</strong> (contains domain) → Navigate to page</li>
+        <li><strong>Natural language</strong> → Send to AI for processing</li>
+    </ul>
+
+    <hr>
+
+    <h2>📊 AI Model</h2>
+    <p>Currently using: <strong>GPT-5-nano</strong></p>
+    <ul>
+        <li>Fastest and most cost-efficient GPT-5 variant</li>
+        <li>Good balance of speed and quality for text processing</li>
+        <li>Supports function calling for navigation</li>
+    </ul>
+
+    <hr>
+
+    <h2>🎨 Visual Features</h2>
+
+    <h3>Color Coding</h3>
+    <ul>
+        <li><strong style="color: magenta;">Magenta</strong> - Headings (lines starting with #)</li>
+        <li><strong style="color: green;">Green</strong> - Links with numbers [0], [1], etc.</li>
+        <li><strong style="color: white;">Bright white</strong> - Bold text (**text**)</li>
+        <li><strong style="color: red;">Red</strong> - Emphasis (_text_)</li>
+        <li><strong style="color: yellow;">Yellow</strong> - Separators (=== or ---)</li>
+        <li><strong style="color: cyan;">Cyan</strong> - Status bar at top</li>
+    </ul>
+
+    <h3>Status Bar</h3>
+    <p>Top of screen shows:</p>
+    <ul>
+        <li>Browser name: DBBasic TextBrowser</li>
+        <li>Current URL</li>
+    </ul>
+
+    <h3>Help Bar</h3>
+    <p>Bottom of screen shows available commands:</p>
+    <ul>
+        <li>Always visible keyboard shortcuts</li>
+        <li>Dynamically shows "F: Form" when forms detected</li>
+        <li>Shows "0-9/G: Links" when links available</li>
+        <li>Scroll percentage indicator on right</li>
+    </ul>
+
+    <hr>
+
+    <h2>🌐 Supported Sites</h2>
+
+    <h3>What Works</h3>
+    <p>Sites that work well in text mode:</p>
+    <ul>
+        <li><strong>News sites</strong> - BBC, NPR Text, CNN Lite</li>
+        <li><strong>Wikipedia</strong> - Full access to articles</li>
+        <li><strong>Search engines</strong> - DuckDuckGo, Google</li>
+        <li><strong>Tech sites</strong> - Hacker News, Stack Overflow, GitHub</li>
+        <li><strong>Old interfaces</strong> - old.reddit.com, Craigslist</li>
+        <li><strong>Lightweight alternatives</strong> - Invidious, Nitter</li>
+    </ul>
+
+    <h3>What Doesn't Work</h3>
+    <p>Sites requiring JavaScript:</p>
+    <ul>
+        <li><strong>YouTube.com</strong> - Use Invidious instead (yewtu.be)</li>
+        <li><strong>Twitter.com</strong> - Use Nitter instead (nitter.net)</li>
+        <li><strong>Facebook</strong> - No good alternative</li>
+        <li><strong>Instagram</strong> - Use bibliogram instances</li>
+        <li><strong>Modern web apps</strong> - Gmail, Google Docs, Slack, etc.</li>
+    </ul>
+
+    <h3>Detection</h3>
+    <p>When you visit a JavaScript-heavy site, the browser will:</p>
+    <ul>
+        <li>Detect empty or minimal content</li>
+        <li>Show a warning message</li>
+        <li>Suggest alternative sites</li>
+        <li>Offer AI assistance to find alternatives</li>
+    </ul>
+
+    <hr>
+
+    <h2>🔧 Technical Details</h2>
+
+    <h3>User Agent</h3>
+    <pre>Lynx/2.9.0dev.6 libwww-FM/2.14 SSL-MM/1.4.1</pre>
+    <p>The browser identifies as Lynx for compatibility.</p>
+
+    <h3>Form Handling</h3>
+    <ul>
+        <li>Supports GET and POST methods</li>
+        <li>Handles relative and absolute URLs</li>
+        <li>Interactive field input with type detection</li>
+        <li>Skips hidden fields, submit buttons</li>
+    </ul>
+
+    <h3>Link Extraction</h3>
+    <ul>
+        <li>Converts relative URLs to absolute</li>
+        <li>Skips anchors (#), javascript:, mailto: links</li>
+        <li>Numbers links in order of appearance</li>
+        <li>Shows first 20 links in list at bottom</li>
+    </ul>
+
+    <h3>Text Rendering</h3>
+    <ul>
+        <li>Wraps text to terminal width (with 4-char margin)</li>
+        <li>Removes JavaScript and CSS from pages</li>
+        <li>Converts HTML to markdown-style text</li>
+        <li>Preserves headings, links, and basic formatting</li>
+    </ul>
+
+    <hr>
+
+    <h2>💡 Tips & Tricks</h2>
+
+    <h3>Speed</h3>
+    <ul>
+        <li>Pages load almost instantly (no JS/CSS/images)</li>
+        <li>Use numbered links for instant navigation</li>
+        <li>AI can navigate for you (faster than typing URLs)</li>
+    </ul>
+
+    <h3>Efficiency</h3>
+    <ul>
+        <li>Start from the homepage (curated links)</li>
+        <li>Use DuckDuckGo for searching</li>
+        <li>Bookmark useful sites mentally (no bookmark feature yet)</li>
+        <li>Use AI to extract info instead of reading entire pages</li>
+    </ul>
+
+    <h3>AI Best Practices</h3>
+    <ul>
+        <li>Be specific: "find pricing" vs "summarize"</li>
+        <li>Ask for navigation: "go to X" instead of visiting manually</li>
+        <li>Chain requests: AI can visit multiple pages</li>
+        <li>Extract data: "list all the features mentioned"</li>
+    </ul>
+
+    <hr>
+
+    <h2>🐛 Known Issues</h2>
+    <ul>
+        <li>JavaScript-heavy sites won't work (by design)</li>
+        <li>Images are not displayed (text-only)</li>
+        <li>Some tables may render poorly</li>
+        <li>No download support yet</li>
+        <li>No history/back button yet</li>
+        <li>No bookmarks yet</li>
+    </ul>
+
+    <hr>
+
+    <h2>🚀 Coming Soon</h2>
+    <ul>
+        <li>History and back button</li>
+        <li>Bookmarks manager</li>
+        <li>Search within page (/)</li>
+        <li>Better table rendering</li>
+        <li>Download support</li>
+        <li>More AI functions (extract to CSV, compare pages)</li>
+        <li>Tab support</li>
+    </ul>
+
+    <hr>
+
+    <h2>📖 Philosophy</h2>
+    <p>DBBasic TextBrowser demonstrates that:</p>
+    <ul>
+        <li>Text-first browsing is <strong>fast</strong></li>
+        <li>Keyboard navigation is <strong>efficient</strong></li>
+        <li>AI makes text browsers <strong>intelligent</strong></li>
+        <li>The web can be <strong>accessible</strong> to everyone</li>
+        <li>Simplicity beats complexity</li>
+    </ul>
+
+    <hr>
+
+    <p><em>Press Ctrl-K to navigate anywhere | Press Q to quit | Press H anytime for help</em></p>
+    <p><small>DBBasic TextBrowser - Fast, accessible, intelligent browsing</small></p>
+</body>
+</html>

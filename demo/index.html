@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TextFirst.css Demo - Against the Tri-Hard Pattern</title>
+    <link rel="stylesheet" href="../textfirst.css">
+</head>
+<body>
+
+<banner type="success">
+    <strong>Welcome!</strong> This page demonstrates TextFirst.css - a semantic CSS framework that works in BOTH text browsers AND graphical browsers.
+</banner>
+
+<article>
+    <header>
+        <center>
+            <h1>TextFirst.css</h1>
+            <p><font color="cyan">A Semantic CSS Framework Against the Tri-Hard Pattern</font></p>
+        </center>
+    </header>
+
+    <section>
+        <h2>What is the Tri-Hard Pattern?</h2>
+        <p>
+            Modern web development requires splitting simple tasks across
+            <color name="error">3+ files</color>: HTML, CSS, JavaScript, build configs,
+            package.json, webpack, babel, etc.
+        </p>
+
+        <box>
+            <h3>Example: A Simple Error Message</h3>
+
+            <details>
+                <summary>The Old Way (1 file, 5 seconds, works everywhere)</summary>
+                <pre><code>&lt;font color="red"&gt;&lt;b&gt;ERROR:&lt;/b&gt; File not found&lt;/font&gt;</code></pre>
+                <p>
+                    <color name="success">✓ Works immediately</color><br>
+                    <color name="success">✓ No dependencies</color><br>
+                    <color name="success">✓ Works in text browsers</color><br>
+                    <color name="success">✓ View source is readable</color>
+                </p>
+            </details>
+
+            <details>
+                <summary>Tailwind (4+ files, 30 minutes setup, build process required)</summary>
+                <pre><code>&lt;div class="bg-red-50 border border-red-400 text-red-700 px-4 py-3 rounded"&gt;
+  &lt;strong class="font-bold"&gt;ERROR:&lt;/strong&gt; File not found
+&lt;/div&gt;</code></pre>
+                <p>
+                    <color name="error">✗ Requires build process</color><br>
+                    <color name="error">✗ Class soup (no semantic meaning)</color><br>
+                    <color name="error">✗ Invisible in text browsers</color><br>
+                    <color name="error">✗ 3 MB framework before purging</color>
+                </p>
+            </details>
+
+            <details>
+                <summary>TextFirst.css (1 file, 5 seconds, works everywhere)</summary>
+                <pre><code>&lt;color name="error"&gt;&lt;b&gt;ERROR:&lt;/b&gt; File not found&lt;/color&gt;</code></pre>
+                <p>
+                    <color name="success">✓ Semantic HTML</color><br>
+                    <color name="success">✓ Works in text browsers</color><br>
+                    <color name="success">✓ Enhanced with CSS</color><br>
+                    <color name="success">✓ 15 KB framework</color>
+                </p>
+            </details>
+        </box>
+    </section>
+
+    <section>
+        <h2>Component Showcase</h2>
+
+        <h3>1. Status Indicators</h3>
+        <p>Perfect for dashboards and system monitoring:</p>
+        <dl>
+            <dt>Web Server</dt>
+            <dd><status value="online">Online</status> - 99.9% uptime</dd>
+
+            <dt>Database</dt>
+            <dd><status value="online">Online</status> - All connections healthy</dd>
+
+            <dt>Cache Server</dt>
+            <dd><status value="degraded">Degraded</status> - Slow response times</dd>
+
+            <dt>Backup System</dt>
+            <dd><status value="offline">Offline</status> - Maintenance mode</dd>
+
+            <dt>CDN</dt>
+            <dd><status value="unknown">Unknown</status> - Checking status...</dd>
+        </dl>
+
+        <h3>2. Banners</h3>
+        <p>Important announcements with semantic types:</p>
+
+        <banner type="info">
+            <strong>Info:</strong> System maintenance scheduled for tonight at 10 PM EST. Expected downtime: 30 minutes.
+        </banner>
+
+        <banner type="warning">
+            <strong>Warning:</strong> Your session will expire in 5 minutes. Please save your work.
+        </banner>
+
+        <banner type="error">
+            <strong>Error:</strong> Connection to database lost. Attempting to reconnect...
+        </banner>
+
+        <banner type="success">
+            <strong>Success!</strong> Your changes have been saved successfully.
+        </banner>
+
+        <h3>3. Numbered Menus</h3>
+        <p>Perfect for keyboard navigation (like DBBasic TextBrowser!):</p>
+        <menu type="numbered">
+            <li><a href="#home">Home Dashboard</a></li>
+            <li><a href="#profile">User Profile</a></li>
+            <li><a href="#settings">Account Settings</a></li>
+            <li><a href="#docs">Documentation</a></li>
+            <li><a href="#support">Help & Support</a></li>
+        </menu>
+
+        <h3>4. Collapsible Sections</h3>
+        <p>Using native HTML <code>&lt;details&gt;</code> - no JavaScript!</p>
+
+        <details>
+            <summary>What is progressive enhancement?</summary>
+            <p>
+                Progressive enhancement is a design philosophy that provides a baseline
+                experience for all users, then enhances it for users with better browsers
+                or capabilities.
+            </p>
+            <p>
+                <color name="success">TextFirst.css embraces this!</color> Pages work in
+                text browsers first, then CSS makes them prettier.
+            </p>
+        </details>
+
+        <details>
+            <summary>View code example</summary>
+            <pre><code>function fetchPage(url) {
+  const response = await fetch(url);
+  const html = await response.text();
+  return parseHTML(html);
+}
+
+// Works in text browsers!
+// No framework needed!</code></pre>
+        </details>
+
+        <details>
+            <summary>Why avoid the Tri-Hard pattern?</summary>
+            <ul>
+                <li>Reduces complexity</li>
+                <li>Faster development</li>
+                <li>Easier debugging</li>
+                <li>Better accessibility</li>
+                <li>Works without build tools</li>
+            </ul>
+        </details>
+
+        <h3>5. Boxes</h3>
+        <p>Frame important content:</p>
+
+        <box>
+            <h4>Default Box</h4>
+            <p>This is a standard box with rounded corners and blue border.</p>
+            <p>Perfect for highlighting important information!</p>
+        </box>
+
+        <box style="double">
+            <h4>Important Notice</h4>
+            <p>This uses a double border (4px) for extra emphasis.</p>
+            <p><color name="warning">Use sparingly for critical information.</color></p>
+        </box>
+
+        <box style="rounded">
+            <h4>Soft Box</h4>
+            <p>This box has extra rounded corners for a softer look.</p>
+        </box>
+
+        <box style="bold">
+            <h4>Bold Box</h4>
+            <p>This box has a bold border with shadow for maximum visibility.</p>
+        </box>
+
+        <h3>6. Semantic Colors</h3>
+        <p>Colors with meaning, not just decoration:</p>
+        <p>
+            <color name="error">Critical error message</color> •
+            <color name="success">Success confirmation</color> •
+            <color name="warning">Warning about potential issues</color> •
+            <color name="info">Informational message</color> •
+            <color name="muted">Less important secondary text</color> •
+            <color name="highlight">Highlighted important text</color>
+        </p>
+
+        <h3>7. Traditional Tags Enhanced</h3>
+        <p>Old HTML tags that work everywhere, enhanced with CSS:</p>
+
+        <center>
+            <font color="magenta"><b>🎉 Centered and Colored! 🎉</b></font>
+        </center>
+
+        <p>Colors using <code>&lt;font color&gt;</code>:</p>
+        <p>
+            <font color="red">Red</font> •
+            <font color="green">Green</font> •
+            <font color="blue">Blue</font> •
+            <font color="yellow">Yellow</font> •
+            <font color="cyan">Cyan</font> •
+            <font color="magenta">Magenta</font>
+        </p>
+
+        <h3>8. Blockquotes</h3>
+        <blockquote>
+            The best programs are written so that computing machines can perform them
+            quickly and so that human beings can understand them clearly. A programmer
+            is ideally an essayist who works with traditional aesthetic and literary forms
+            as well as mathematical concepts, to communicate the way that an algorithm works
+            and to convince a reader that the results will be correct.
+            <footer>— Donald Knuth, <cite>Selected Papers on Computer Science</cite></footer>
+        </blockquote>
+
+        <h3>9. Keyboard and Sample Output</h3>
+        <p>Show keyboard shortcuts and command output:</p>
+        <p>Press <kbd>Ctrl</kbd> + <kbd>K</kbd> to open the command palette.</p>
+        <p>Press <kbd>H</kbd> for help.</p>
+
+        <p>Sample output:</p>
+        <samp>$ npm install textfirst-css
+✓ Package installed successfully
+✓ No build process required
+✓ Ready to use immediately!</samp>
+
+        <h3>10. Code Blocks</h3>
+        <p>Syntax-friendly code display:</p>
+        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;My Page&lt;/title&gt;
+  &lt;link rel="stylesheet" href="textfirst.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;banner type="success"&gt;
+    It just works!
+  &lt;/banner&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+        <p>Inline code: <code>const x = 42;</code></p>
+    </section>
+
+    <section>
+        <h2>Comparison Table</h2>
+        <p>How does TextFirst.css compare to modern frameworks?</p>
+
+        <table simple>
+            <thead>
+                <tr>
+                    <th>Feature</th>
+                    <th>TextFirst.css</th>
+                    <th>Tailwind</th>
+                    <th>Bootstrap</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>File Size</td>
+                    <td><color name="success">15 KB</color></td>
+                    <td><color name="error">3 MB</color> (before purge)</td>
+                    <td><color name="warning">200 KB</color></td>
+                </tr>
+                <tr>
+                    <td>Build Process</td>
+                    <td><color name="success">None</color></td>
+                    <td><color name="error">Required</color></td>
+                    <td><color name="success">Optional</color></td>
+                </tr>
+                <tr>
+                    <td>Works in Text Browsers</td>
+                    <td><color name="success">Yes</color></td>
+                    <td><color name="error">No</color></td>
+                    <td><color name="error">No</color></td>
+                </tr>
+                <tr>
+                    <td>Semantic HTML</td>
+                    <td><color name="success">Required</color></td>
+                    <td><color name="error">Discouraged</color></td>
+                    <td><color name="warning">Optional</color></td>
+                </tr>
+                <tr>
+                    <td>Learning Curve</td>
+                    <td><color name="success">Just HTML</color></td>
+                    <td><color name="error">High</color></td>
+                    <td><color name="warning">Medium</color></td>
+                </tr>
+                <tr>
+                    <td>Dependencies</td>
+                    <td><color name="success">Zero</color></td>
+                    <td><color name="error">PostCSS, Node</color></td>
+                    <td><color name="success">Zero</color></td>
+                </tr>
+                <tr>
+                    <td>View Source Readability</td>
+                    <td><color name="success">High</color></td>
+                    <td><color name="error">Low</color></td>
+                    <td><color name="warning">Medium</color></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section>
+        <h2>Forms Example</h2>
+        <p>Enhanced form controls with zero JavaScript:</p>
+
+        <form>
+            <fieldset>
+                <legend>Contact Information</legend>
+
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="John Doe">
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="john@example.com">
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" placeholder="Your message here..."></textarea>
+
+                <label for="priority">Priority</label>
+                <select id="priority" name="priority">
+                    <option>Low</option>
+                    <option selected>Medium</option>
+                    <option>High</option>
+                </select>
+
+                <label>
+                    <input type="checkbox" name="newsletter">
+                    Subscribe to newsletter
+                </label>
+
+                <button type="submit">Send Message</button>
+            </fieldset>
+        </form>
+    </section>
+
+    <section>
+        <h2>Why TextFirst.css?</h2>
+
+        <aside>
+            <h3>💡 Core Philosophy</h3>
+            <p>
+                TextFirst.css is built on the principle that <color name="highlight">HTML should work standalone</color>.
+                CSS should enhance, not define. JavaScript should be optional for static content.
+            </p>
+            <p>
+                This is <strong>progressive enhancement</strong> done right.
+            </p>
+        </aside>
+
+        <h3>Benefits</h3>
+        <ul>
+            <li><strong>Accessible by default</strong> - Works in text browsers, screen readers, and curl</li>
+            <li><strong>Fast</strong> - Small file size, no build process, instant loading</li>
+            <li><strong>Maintainable</strong> - Semantic HTML is self-documenting</li>
+            <li><strong>Future-proof</strong> - Relies on stable HTML standards, not framework trends</li>
+            <li><strong>Developer-friendly</strong> - View source makes sense, easy to debug</li>
+        </ul>
+
+        <h3>Who is this for?</h3>
+        <dl>
+            <dt>Terminal Users</dt>
+            <dd>SSH sessions, tmux, remote access - full styling in text mode</dd>
+
+            <dt>Minimalists</dt>
+            <dd>People who want fast, simple websites without bloat</dd>
+
+            <dt>Accessibility Advocates</dt>
+            <dd>Screen readers, low vision, keyboard-only navigation</dd>
+
+            <dt>Educators</dt>
+            <dd>Teaching web development without overwhelming students</dd>
+
+            <dt>Static Site Generators</dt>
+            <dd>Hugo, Jekyll, 11ty - no build step needed</dd>
+
+            <dt>Documentation Sites</dt>
+            <dd>Technical docs that should work everywhere</dd>
+        </dl>
+    </section>
+
+    <section>
+        <h2>Getting Started</h2>
+
+        <box style="bold">
+            <h3>Installation</h3>
+            <p>Just one line in your HTML:</p>
+            <pre><code>&lt;link rel="stylesheet" href="textfirst.css"&gt;</code></pre>
+            <p>That's it! No package.json, no webpack, no babel, no build process.</p>
+            <p><color name="success">It just works.</color></p>
+        </box>
+
+        <h3>Basic Usage</h3>
+        <p>Write semantic HTML like it's 1997, but better:</p>
+        <pre><code>&lt;banner type="info"&gt;
+  Welcome to my site!
+&lt;/banner&gt;
+
+&lt;menu type="numbered"&gt;
+  &lt;li&gt;&lt;a href="/home"&gt;Home&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="/about"&gt;About&lt;/a&gt;&lt;/li&gt;
+&lt;/menu&gt;
+
+&lt;article&gt;
+  &lt;h1&gt;My Article&lt;/h1&gt;
+  &lt;p&gt;
+    This is &lt;color name="success"&gt;good content&lt;/color&gt;
+    that works everywhere.
+  &lt;/p&gt;
+&lt;/article&gt;</code></pre>
+    </section>
+
+    <footer>
+        <hr>
+        <center>
+            <p><color name="muted">TextFirst.css - Bringing Back Semantic HTML</color></p>
+            <p><color name="muted">Version 0.1.0 • MIT License • 2025</color></p>
+            <p>
+                <a href="https://github.com/yourusername/textfirst-css">GitHub</a> •
+                <a href="../TEXT-WEB-HTML.md">Documentation</a> •
+                <a href="../SEMANTIC-CSS-FRAMEWORK.md">Philosophy</a>
+            </p>
+        </center>
+    </footer>
+</article>
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+# Include documentation and configuration files
+include README.md
+include LICENSE
+include requirements.txt
+include pyproject.toml
+
+# Include HTML files
+include *.html
+include homepage.html
+include help.html
+include demo.html
+
+# Include markdown files
+include IDEAS.md
+include project-summary.md
+
+# Exclude build and cache files
+global-exclude __pycache__
+global-exclude *.py[co]
+global-exclude .DS_Store
